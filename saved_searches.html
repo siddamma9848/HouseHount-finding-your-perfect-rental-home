@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Searches - Rent House Finder</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Saved Searches</h2>
+        <a href="/home">Back to Home</a>
+        <ul>
+        {% for search in searches %}
+            <li>City: {{ search.city }}, Price: ${{ search.min_price }} - ${{ search.max_price }}, Bedrooms: {{ search.bedrooms }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html> 
